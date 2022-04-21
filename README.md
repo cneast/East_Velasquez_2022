@@ -1,6 +1,7 @@
 # East_Velasquez_2022
 Files for ​Unintended Consequences of Immigration Enforcement: Household Services and High-Educated Mothers' Work
-Updates 4.21.22
+
+Updated 4.21.22 by Chloe N. East
 
 The do files to replicate East and Velasquez (2022) are included in the Code folder. The numbered do files indicate the order in which they should be run. The do files that are not numbered will be called up in the numbered do files as needed. 
 
