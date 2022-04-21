@@ -7,36 +7,10 @@ set matsize 11000
 set maxvar 11000 
 pause off
 
-
-/*********************************************************************/
-/* DIRECTORY AND FILE NAMES: */  
-clear all 
-
-	if c(username)=="chloeeast" {  		// for Chloe's computer
-			global dir "/Users/chloeeast/Dropbox/Migration_Enforcement_CE_AV/Enforcement/"	 	 	
-		} 
-		else{ 
-			if c(username)=="Chloe" {  		// for Chloe's laptop
-			global dir "/Users/Chloe/Dropbox/Migration_Enforcement_CE_AV/Enforcement/"	 	 	
-			} 
-			} 
-		else{
-			if c(username)=="velasqan" { 	// for Andrea's pc
-				global dir  "C:/Users/velasqan/Dropbox/Migration_Enforcement_CE_AV/Enforcement/"
-			}
-			}	
-
-		else{ 
-			if c(username)=="apv4" {  		// for Andrea's laptop
-			global dir "/Users/apv4/Dropbox/Migration_Enforcement_CE_AV/Enforcement/"	 	
-			}
-			}
-/*********************************************************************/ 
- 
-macro define ACS       "$dir/data/ACS/" 
-macro define ENFOR     "$dir/data/Enforcement/" 
-macro define RESULTS   "$dir/draft/it09_spring2022/tab_fig" 
-macro define CODE      "$dir/pgms/Programs for JHR/" 
+macro define ACS       "" 
+macro define ENFOR     "" 
+macro define RESULTS   "" 
+macro define CODE      "" 
 
 
 
@@ -586,10 +560,6 @@ drop _merge
 
 merge m:1 cpuma0010 using "$ENFOR/final_deportations_cpuma0010.dta"
 drop _merge
-
-merge m:1 cpuma0010 year using "$ENFOR/ice_policies_cpuma.dta"
-drop if _merge~=3
-drop _merge 
 
 
 local grouplist5 "ls_hsp_fb lsnc_mc_80  lsnc_mx_80 "

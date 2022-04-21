@@ -9,38 +9,10 @@ set maxvar 11000
 pause on
 
 
-/*********************************************************************/
-/* DIRECTORY AND FILE NAMES: */  
-clear all 
-
-	if c(username)=="chloeeast" {  		// for Chloe's computer
-			global dir "/Users/chloeeast/Dropbox/Migration_Enforcement_CE_AV/Enforcement/"	 	 	
-		} 
-		else{ 
-			if c(username)=="Chloe" {  		// for Chloe's laptop
-			global dir "/Users/Chloe/Dropbox/Migration_Enforcement_CE_AV/Enforcement/"	 	 	
-			} 
-			} 
-			
-			
-			
-
-		else{ 
-			if c(username)=="VELASQAN" {  		// for Andrea's pc
-			global dir "C:/Users/VELASQAN/Dropbox/Migration_Enforcement_CE_AV/Enforcement/"	 	 	
-			} 
-			} 
-		else{
-			if c(username)=="apv4" { 	// for Andrea's laptop
-			global dir  "/Users/apv4/Dropbox/Migration_Enforcement_CE_AV/Enforcement/"
-			}
-			}	
-
-/*********************************************************************/ 
- 
-macro define ACS       "$dir/data/ACS/" 
-macro define ENFOR     "$dir/data/Enforcement/" 
-macro define RESULTS   "$dir/draft/it07_fall2020/tab_fig" 
+macro define ACS       "" 
+macro define ENFOR     "" 
+macro define RESULTS   "" 
+macro define CODE      "" 
 
 
 local o "cpuma0010"
