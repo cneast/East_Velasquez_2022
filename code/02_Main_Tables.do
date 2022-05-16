@@ -1065,7 +1065,7 @@ local o "cpuma0010"
 // whether enforcement in place in birth year of youngest child
 rename year year_temp
 rename byear_yngch year
-merge m:1 `o' year using $ENFOR/287g_SC_EVerify_1_31_22_cpuma0010.dta
+merge m:1 `o' year using $ENFOR/287g_SC_EVerify_5_13_22_cpuma0010.dta
 tab year _merge
 sum statefip puma if _merge==1
 sum statefip puma if _merge==2 & year<=2011 //not merging are pumas that changed codes because of katrina, HI, and VA
@@ -1079,7 +1079,7 @@ rename year byear_yngch
 
 forvalues n=0/15 {
 rename year_yngch_age`n' year
-merge m:1 `o' year using $ENFOR/287g_SC_EVerify_1_31_22_cpuma0010.dta
+merge m:1 `o' year using $ENFOR/287g_SC_EVerify_5_13_22_cpuma0010.dta
 tab year _merge
 sum statefip puma if _merge==1
 sum statefip puma if _merge==2 & year<=2011 //not merging are pumas that changed codes because of katrina, HI, and VA
@@ -1269,7 +1269,7 @@ local o "cpuma0010"
 // whether enforcement in place in birth year of youngest child
 rename year year_temp
 rename byear_yngch year
-merge m:1  `o' year using $ENFOR/287g_SC_EVerify_1_31_22_cpuma0010.dta 
+merge m:1  `o' year using $ENFOR/287g_SC_EVerify_5_13_22_cpuma0010.dta 
 tab year _merge
 sum statefip puma if _merge==1
 sum statefip puma if _merge==2 & year<=2011 //not merging are pumas that changed codes because of katrina, HI, and VA
@@ -1283,7 +1283,7 @@ rename year byear_yngch
 
 forvalues n=0/15 {
 rename year_yngch_age`n' year
-merge m:1  `o' year using $ENFOR/287g_SC_EVerify_1_31_22_cpuma0010.dta 
+merge m:1  `o' year using $ENFOR/287g_SC_EVerify_5_13_22_cpuma0010.dta 
 tab year _merge
 sum statefip puma if _merge==1
 sum statefip puma if _merge==2 & year<=2011 //not merging are pumas that changed codes because of katrina, HI, and VA
