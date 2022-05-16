@@ -127,7 +127,7 @@ save "$ACS/char_for_trends.dta", replace
 ***********************************
 * Create Event Time Dummies 
 preserve
-use $ENFOR/287g_SC_EVerify_1_31_22_cpuma0010.dta , clear
+use $ENFOR/287g_SC_EVerify_5_13_22_cpuma0010.dta , clear
 sum jail287g* task287g* SC*
 
 gen SC_full = SC_jan==1
