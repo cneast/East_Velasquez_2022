@@ -16,7 +16,7 @@ keep if _merge==3
 drop _merge
 
 replace year=year-1
-merge m:1 `o' year using $ENFOR/287g_SC_EVerify_1_31_22_cpuma0010.dta
+merge m:1 `o' year using $ENFOR/287g_SC_EVerify_5_13_22_cpuma0010.dta
 tab year _merge, m 
 tab statefip _merge, m 
 drop _merge
@@ -26,7 +26,7 @@ replace year=year+1
 
 
 replace year=year+1
-merge m:1 `o' year using $ENFOR/287g_SC_EVerify_1_31_22_cpuma0010.dta
+merge m:1 `o' year using $ENFOR/287g_SC_EVerify_5_13_22_cpuma0010.dta
 tab year _merge, m 
 tab statefip _merge, m 
 drop _merge
@@ -35,7 +35,7 @@ for any jail287g task287g state287g SC: rename X_frac X_frac_nextyr
 replace year=year-1
 
 
-merge m:1 `o' year using $ENFOR/287g_SC_EVerify_1_31_22_cpuma0010.dta
+merge m:1 `o' year using $ENFOR/287g_SC_EVerify_5_13_22_cpuma0010.dta
 tab year _merge
 sum statefip puma if _merge==1
 sum statefip puma if _merge==2 & year<=2011 //not merging are pumas that changed codes because of katrina, HI, and VA
