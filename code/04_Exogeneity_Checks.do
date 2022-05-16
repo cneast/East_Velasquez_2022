@@ -25,7 +25,7 @@ keep change_det cpuma0010
 tempfile det
 save "`det'", replace
 
-use $ENFOR/287g_SC_EVerify_1_31_22_cpuma0010.dta, clear
+use $ENFOR/287g_SC_EVerify_5_13_22_cpuma0010.dta, clear
 gen year_SC = year if SC_jan>0 & SC_jan~=.
 bysort  cpuma0010: egen min_year_SC = min(year_SC)
 keep min_year_SC  cpuma0010
