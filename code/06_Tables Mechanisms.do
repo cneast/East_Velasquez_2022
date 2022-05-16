@@ -657,7 +657,7 @@ foreach group in `grouplist'    {
 foreach demog in   `sector'_`group'_w    {
 gen u2_`demog' = (uhr_`demog'/pop_all)*100  
 
-
+reghdfe u2_`demog'  et_I_*   [aw=`aweight'], absorb(cpuma0010 year) vce (cluster cpuma0010)  
 coefplot, keep(et_I_4 et_I_5 et_I_6 et_I_7 et_I_8 et_I_9 et_I_10 et_I_11 et_I_12   )  vertical omitted xline(6.5) ylabel(-4(1)4)  yline(0) xtitle("Event Time (years)") ytitle("Beta")
 graph export "$RESULTS/figure3.png", replace  height(600) width(800)
 
