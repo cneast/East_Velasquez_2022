@@ -13,7 +13,7 @@ tab year _merge // nothing not matched in 2005-2011
 drop _merge
 
 
-merge m:1 `o' year using $ENFOR/287g_SC_EVerify_1_31_22_cpuma0010.dta
+merge m:1 `o' year using $ENFOR/287g_SC_EVerify_5_13_22_cpuma0010.dta
 tab year _merge
 sum statefip puma if _merge==1
 sum statefip puma if _merge==2 & year<=2011 //not merging are pumas that changed codes because of katrina, HI, and VA
